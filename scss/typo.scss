@@ -1,0 +1,44 @@
+// Default font size
+$font-size: 83%;
+
+// Default line height
+$line-height: 1.6em;
+
+// Default font face
+$font-face: "Verdana", "Trebuchet MS", sans-serif;
+
+@mixin standard-text {
+   font: #{$font-size}/#{$line-height} $font-face;
+}
+
+@mixin headline($size, $color:#000) {
+   color: $color;
+   margin: 0 0 $line-height/$size
+}
+
+
+/* ===========================================================================================================
+   Common font styles                                                                       
+   =========================================================================================================== */
+
+/* Body font style */
+body {
+   @include standard-text;
+   vertical-align: baseline;
+}
+
+
+/* ===========================================================================================================
+   Headlines                                                                       
+   =========================================================================================================== */
+
+/**
+  * @section main content
+  * @subsection headings
+  *
+  * Headings
+  */
+  
+h1 {
+   @include headline(2.4);
+}
