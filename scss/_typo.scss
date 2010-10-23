@@ -5,15 +5,19 @@ $font-size: 83%;
 $line-height: 1.6em;
 
 // Default font face
-$font-face: "Verdana", "Trebuchet MS", sans-serif;
+$font-family: "Verdana", "Trebuchet MS", sans-serif;
+
+$font-size-h1: 2.4em;
+$font-size-h2: 1.9em;
+
+
 
 @mixin standard-text {
-   font: #{$font-size}/#{$line-height} $font-face;
+   font: #{$font-size}/#{$line-height} $font-family;
 }
 
-@mixin headline($size, $color:#000) {
-   color: $color;
-   margin: 0 0 $line-height/$size
+@mixin font($style, $variant, $weight, $size, $line-height, $family) {
+   font: $style $variant $weight #{$size}/#{$line-height} $family;
 }
 
 
@@ -25,7 +29,9 @@ $font-face: "Verdana", "Trebuchet MS", sans-serif;
 body {
    @include standard-text;
    vertical-align: baseline;
+   padding: $line-height*4;
 }
+
 
 
 /* ===========================================================================================================
@@ -33,12 +39,22 @@ body {
    =========================================================================================================== */
 
 /**
-  * @section main content
+  * @section content
   * @subsection headings
   *
   * Headings
   */
-  
+
+/* Heading 1 */
 h1 {
-   @include headline(2.4);
+   color: #f00;
+   @include font(normal, normal, normal, $font-size-h1, $line-height*2/$font-size-h1, $font-family);
+   margin: 0 0 $line-height/$font-size-h1*1.5 + em;
+}
+
+/* Heading 2 */
+h2 {
+   color: #00f;
+   @include font(normal, normal, normal, $font-size-h2, $line-height/$font-size-h2, $font-family);
+   margin: $line-height/$font-size-h2/2 + em 0 $line-height/$font-size-h2/2 + em;
 }

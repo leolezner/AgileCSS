@@ -1,0 +1,75 @@
+/** 
+  * reset.css
+  *
+  * Reseting the browser standard properties
+  *
+  * @project AgileCSS Framework
+  * @copyright (c) 2010-2011 by Leonid Lezner
+  * @author Leonid Lezner 
+  * @version 0.0.1
+  * @date 2010-10-23
+  * @license Creative Commons Attribution 2.5 Generic License
+  * @link http://www.leolezner.de
+  * @valid true
+  */
+
+/* ==========================================================================================================================================================
+   Reset
+   ========================================================================================================================================================== */
+
+/**
+  * @section reset
+  * @see http://meyerweb.com/eric/tools/css/reset/
+  */
+
+html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+   background: transparent;
+   border: 0;
+   font-size: 100%;
+   font-weight: normal;
+   margin: 0;
+   outline: 0;
+   padding: 0;
+   vertical-align: baseline;
+}
+
+
+/* Force the vertical scroll bar */
+html { 
+   height: 102%;
+}
+
+/* Preventing rounding errors in fonts */
+body {
+   line-height: 1;
+   font-size: 100.01%;
+}
+
+ol, ul {
+   list-style: none; 
+}
+
+blockquote, q {
+   quotes: none;
+}
+
+abbr, acronym {
+   border: 0;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+   content: '';
+   content: none;
+}
+
+/* Do not forget to define the focus styles in _navigation.scss! */
+:focus {
+   outline: 0;
+}
+
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
