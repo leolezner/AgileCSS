@@ -2,10 +2,20 @@
    Font and text debugging                                                                       
    =========================================================================================================== */
 
-h1, h2, h3, h4, h5, h6 {
-   background: rgba(0,0,255,0.3);
-}
+.debug {
+   h1, h2, h3, h4, h5, h6 {
+      background: rgba(0,0,255,0.3);
+   }
 
-p, ul, ol, li, pre, blockquote {
-   background: rgba(255,255,0,0.3);
+   p, ul, ol, dl, pre, blockquote {
+      background: rgba(255,255,0,0.3);
+   }
+
+   div {
+      outline: 1px solid red;
+   }
+   
+   table {
+      background: rgba(0,255,0,0.3);
+   }
 }

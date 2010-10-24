@@ -1,0 +1,45 @@
+/** 
+  * table.css
+  *
+  * Table
+  *
+  * @project AgileCSS
+  * @copyright (c) 2010-2011 by Leonid Lezner
+  * @author Leonid Lezner 
+  * @version 0.0.1
+  * @date 2010-10-24
+  * @license Creative Commons Attribution 2.5 Generic License
+  * @link http://www.leolezner.de
+  * @valid true
+  */
+
+$table-border: 1px solid black;
+  
+#main-column {
+  table {
+     border-left: $table-border;
+     border-top: $table-border;
+     line-height: $line-height;
+     margin: 0 0 $line-height;
+     
+     caption {
+        font-weight: bold;   
+        text-align: left;
+     }
+     
+     th, td {
+        border-right: $table-border;
+        padding: $line-height/8 $li-indent;
+        text-align: left;
+        vertical-align: top;
+     }
+     
+     th {
+        background: #efefef;
+     }
+     
+     tr {
+        border-bottom: $table-border;
+     }
+  }
+}

@@ -1,0 +1,61 @@
+/** 
+  * list.css
+  *
+  * List
+  *
+  * @project AgileCSS
+  * @copyright (c) 2010-2011 by Leonid Lezner
+  * @author Leonid Lezner 
+  * @version 0.0.1
+  * @date 2010-10-24
+  * @license Creative Commons Attribution 2.5 Generic License
+  * @link http://www.leolezner.de
+  * @valid true
+  */
+
+$li-indent: 1.5em;
+  
+#main-column {
+   ul {
+      padding: 0 0 $line-height $li-indent - 0.3em;
+      
+      li {
+         list-style: outside disc;
+         padding: 0 0 0 0.4em;
+      }
+   }
+
+   ol {
+      padding: 0 0 $line-height $li-indent + 0.2em;
+      
+      li {
+         list-style: outside decimal;
+      }
+   }
+   
+   ul ul, ul ol, ol ul, ol ol {
+      margin: 0;
+      padding-bottom: 0;
+   }
+
+   ul ul li, ol ul li {
+      list-style: outside circle;
+   }
+
+   ol ol li, ul ol li {
+      list-style: outside lower-alpha;
+   }
+   
+   dl {
+      padding: 0 0 $line-height;
+      
+      dt {
+         font-weight: bold;
+      }
+      
+      dd {
+         padding: 0 0 0 $li-indent;
+      }
+   }
+}
+

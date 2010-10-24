@@ -1,0 +1,1 @@
+sass -t compressed --watch scss:css
