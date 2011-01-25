@@ -8,6 +8,22 @@
 
     var opts = $.extend({}, $.fn.VerticalRhythmGrid.defaults, options);
 
+    function setLine(index, i, main) {
+      var h = (i*opts.lineheight+opts.offset) + (main ? 0 : (opts.lineheight / 2));
+    
+      $('#hr' + index).css({
+         "position": "absolute",
+         "width": "100%",
+         "left": 0,
+         "top": h + "em",
+         "height": "1px",
+         "border-top": "1px solid red",
+         "opacity": main ? "0.3" : "0.15",
+         "z-index": -1000,
+         "margin": 0
+      });
+    }
+
     return this.each(function() {
       var $this = $(this);
       
@@ -17,18 +33,13 @@
       }
 
       for(var i=0; i<opts.number; i++){
-         $this.append('<hr id="hr'+i+'" />');
-         $('#hr'+i).css({
-            "position": "absolute",
-            "width": "100%",
-            "left": 0,
-            "top": (i*opts.lineheight+opts.offset)+"em",
-            "height": "1px",
-            "border-top": "1px solid red",
-            "opacity": "0.3",
-            "z-index": -1000,
-            "margin": 0
-         });
+         var index = i;
+         
+         $this.append('<hr id="hr'+index+'" />');
+         setLine(index, i, true);
+
+         $this.append('<hr id="hr'+index+'_sub" />');
+         setLine(index+"_sub", i, false);
       }
     });
   };

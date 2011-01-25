@@ -14,12 +14,14 @@
   */
 
 $table-border: 1px solid black;
-  
+
 #main-column {
   table {
      border-left: $table-border;
+     
      border-top: $table-border;
      line-height: $line-height;
+     
      margin: 0 0 $line-height;
      
      caption {
@@ -29,7 +31,7 @@ $table-border: 1px solid black;
      
      th, td {
         border-right: $table-border;
-        padding: $line-height/8 $li-indent;
+        padding: $line-height/4 $line-height/2;
         text-align: left;
         vertical-align: top;
      }

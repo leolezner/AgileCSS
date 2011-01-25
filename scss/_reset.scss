@@ -25,12 +25,9 @@
 html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
-   background: transparent;
    border: 0;
    font-size: 100%;
-   font-weight: normal;
    margin: 0;
-   outline: 0;
    padding: 0;
    vertical-align: baseline;
 }
@@ -47,10 +44,6 @@ body {
    font-size: 100.01%;
 }
 
-ol, ul {
-   list-style: none; 
-}
-
 blockquote, q {
    quotes: none;
 }
@@ -62,11 +55,6 @@ abbr, acronym {
 blockquote:before, blockquote:after, q:before, q:after {
    content: '';
    content: none;
-}
-
-/* Do not forget to define the focus styles in _navigation.scss! */
-:focus {
-   outline: 0;
 }
 
 table {

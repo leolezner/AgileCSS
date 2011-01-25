@@ -13,9 +13,10 @@
   * @valid true
   */
 
-$li-indent: 1.5em;
+$li-indent: 1.4em;
   
 #main-column {
+   /* Unordered list */
    ul {
       padding: 0 0 $line-height $li-indent - 0.3em;
       
@@ -25,6 +26,7 @@ $li-indent: 1.5em;
       }
    }
 
+   /* Ordered list */
    ol {
       padding: 0 0 $line-height $li-indent + 0.2em;
       
@@ -33,11 +35,13 @@ $li-indent: 1.5em;
       }
    }
    
+   /* List in a list */
    ul ul, ul ol, ol ul, ol ol {
       margin: 0;
       padding-bottom: 0;
    }
 
+   /* List element of an element in a list */
    ul ul li, ol ul li {
       list-style: outside circle;
    }
@@ -46,6 +50,7 @@ $li-indent: 1.5em;
       list-style: outside lower-alpha;
    }
    
+   /* Definition list */
    dl {
       padding: 0 0 $line-height;
       
