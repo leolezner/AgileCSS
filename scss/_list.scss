@@ -15,7 +15,7 @@
 
 $li-indent: 1.4em;
   
-#main-column {
+#main-column, #left-column, #right-column {
    /* Unordered list */
    ul {
       padding: 0 0 $line-height $li-indent - 0.3em;

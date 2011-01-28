@@ -13,7 +13,123 @@
   * @valid true
   */
   
+
+$page-width: 980px;
+$page-margin: 0;
+$min-height: 500px;
   
+/**
+ * @section Body
+ *
+ * Body Styles
+ */
+
+/* Body */
 body {
-   padding: 4em;
+
+}
+
+
+/* ===========================================================================================================
+   Container and Wrapper                                                                       
+   =========================================================================================================== */
+
+/**
+  * @section Container
+  *
+  * Container
+  */
+
+/* Main container */
+#header-container, #content-container, #footer-container {
+   
+}
+
+#header-container {
+   
+}
+
+#content-container {
+   
+}
+
+#footer-container {
+   
+}
+
+
+/**
+  * @section Wrapper
+  *
+  * Page wrapper for centering the page
+  */
+
+/* Page wrapper */
+.wrapper {
+   margin: 0 auto;
+   padding: $page-margin;
+   width: $page-width;
+}
+
+
+
+/* ===========================================================================================================
+   Areas                                                                      
+   =========================================================================================================== */
+
+/**
+  * @section Areas
+  *
+  * Content areas
+  */
+
+/* Content areas */
+#header, #content, #footer {
+   
+}
+
+/* Header */
+#header {
+   
+}
+
+/* Content area */
+#content {
+   min-height: $min-height;
+}
+
+#left-column, #right-column, #main-column {
+   float: left;
+   padding: 0;
+}
+
+/* Footer */
+#footer {
+   
+}
+
+
+/* ==========================================================================================================================================================
+   Clearfix
+   ========================================================================================================================================================== */
+
+/**
+  * @subsection EasyClearing
+  *
+  * Cleart die Floats ohne zusätzliches Markup
+  * 
+  * @see http://www.positioniseverything.net/easyclearing.html
+  */
+
+/* For all Browsers */
+.clearfix:after, .group:after {
+   content: ".";
+   clear: both;    
+   display: block;
+   height: 0;
+   visibility: hidden;
+}
+ 
+html[xmlns] .clearfix, html[xmlns] .group {
+   display: block;
 }
