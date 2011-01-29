@@ -5,7 +5,7 @@
   *
   * @project AgileCSS
   * @copyright (c) 2010-2011 by Leonid Lezner
-  * @author Leonid Lezner 
+  * @author Leonid Lezner
   * @version 0.0.1
   * @date 2010-10-24
   * @license Creative Commons Attribution 2.5 Generic License
@@ -20,7 +20,7 @@ $page-margin:     0;
 $page-min-height: 500px;
 
 // Grid settings
-$grid-gutter:     25px;
+$grid-gutter:     20px;
 $grid-column:     60px;
 
 
@@ -74,19 +74,41 @@ body {
 .wrapper {
    margin: 0 auto;
    padding: $page-margin;
-   @include grid-span($page-cols);
+   width: ($grid-column + $grid-gutter) * $page-cols;
 }
 
 
 
 /* ===========================================================================================================
-   Areas                                                                      
+   Layout                                                                      
    =========================================================================================================== */
 
 /**
-  * @section Areas
+ * layout-m: middle column only
+ * layout-lm: left and middle columns
+ * layout-mr: middle and right columns
+ * layout-lmr: left, middle and right columns 
+ */
+
+// Left and middle column
+@include layout-lm(3);
+
+// Middle and right column
+@include layout-mr(3);
+
+// Left (first parameter), middle and right (second parameter) column
+@include layout-lmr(2, 2);
+
+
+
+/* ===========================================================================================================
+   Sections                                                                      
+   =========================================================================================================== */
+
+/**
+  * @section Sections
   *
-  * Content areas
+  * Content sections
   */
 
 /* Content areas */
@@ -104,80 +126,20 @@ body {
    min-height: $page-min-height;
 }
 
-#left-column, #right-column, #main-column {
-   float: left;
-   padding: 0;
+
+#left-column{
+   
+}
+
+#right-column {
+   
+}
+
+#main-column {
+
 }
 
 /* Footer */
 #footer {
    
-}
-
-
-
-/* ==========================================================================================================================================================
-   Layout
-   ========================================================================================================================================================== */
-
-/* Hide columns */
-.layout-m #left-column, 
-.layout-m #right-column, 
-.layout-lm #right-column,
-.layout-mr #left-column {
-   display: none;
-}
-
-.layout-lm {
-   $cols-left: 3;
-   
-   $left-column-width: ($grid-column + $grid-gutter) * $cols-left - $grid-gutter;
-   $main-column-width: ($grid-column + $grid-gutter) * ($page-cols - $cols-left) - $grid-gutter;
-
-   #left-column {
-      width: $left-column-width;
-      margin: 0 $grid-gutter 0 -1*($main-column-width + $left-column-width + $grid-gutter);
-   }
-   
-   #main-column {
-      width: $main-column-width;
-      margin: 0 0 0 ($left-column-width + $grid-gutter);
-   }
-}
-
-.layout-m {
-   $left-column-width: 300px;
-   $main-column-width: 500px;
-
-   #main-column {
-      width: $main-column-width;
-      margin: 0 0 0 ($left-column-width + $grid-gutter);
-   }
-}
-
-
-
-/* ==========================================================================================================================================================
-   Clearfix
-   ========================================================================================================================================================== */
-
-/**
-  * @subsection EasyClearing
-  *
-  * Cleart die Floats ohne zusätzliches Markup
-  * 
-  * @see http://www.positioniseverything.net/easyclearing.html
-  */
-
-/* For all Browsers */
-.clearfix:after, .group:after {
-   content: ".";
-   clear: both;    
-   display: block;
-   height: 0;
-   visibility: hidden;
-}
- 
-html[xmlns] .clearfix, html[xmlns] .group {
-   display: block;
 }

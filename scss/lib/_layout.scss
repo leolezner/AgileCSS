@@ -1,0 +1,173 @@
+#left-column, #right-column, #main-column {
+   float: left;
+   padding: 0;
+}
+
+/* Hide columns */
+.layout-m #left-column, 
+.layout-m #right-column, 
+.layout-lm #right-column,
+.layout-mr #left-column {
+   display: none;
+}
+
+// Element should have no margins and paddings
+@mixin nopm {
+   margin: 0;
+   padding: 0;
+}
+
+
+// Include to set the width of the element and its margin
+@mixin grid-span($columns, $pos:"") {
+   width: ($grid-column + $grid-gutter) * $columns - $grid-gutter;
+   // No margin on the left side if first element
+   @if $pos == "first" {
+      margin: 0 $grid-gutter/2 0 0;
+   }
+   // No margin on the right side if last element
+   @if $pos == "last" {
+      margin: 0 0 0 $grid-gutter/2;
+   }
+   @if $pos == "" {
+      margin: 0 $grid-gutter/2 0 $grid-gutter/2;
+   }
+}
+
+// Include to insert a spacing before the element
+@mixin grid-space($columns, $prop:"margin", $pos:"") {
+   #{$prop}-left: ($grid-column + $grid-gutter) * $columns;
+   
+   @if $pos == "first" {
+      margin-left: 0;
+   }
+}
+
+/**
+  * @section columns
+  * @subsecsection layout lm
+  *
+  * Layout lm
+  * _____________
+  * | L |   M   |
+  */
+
+@mixin layout-lm($cols-left) {
+   .layout-lm {
+      $left-column-width: ($grid-column + $grid-gutter) * $cols-left - $grid-gutter;
+      $main-column-width: ($grid-column + $grid-gutter) * ($page-cols - $cols-left) - $grid-gutter;
+
+      #left-column {
+         width: $left-column-width;
+         margin: 0 $grid-gutter 0 -1*($main-column-width + $left-column-width + $grid-gutter);
+      }
+
+      #main-column {
+         width: $main-column-width;
+         margin: 0 0 0 ($left-column-width + $grid-gutter*1.5);
+      }
+   }
+}
+
+
+/**
+  * @section columns
+  * @subsecsection layout m
+  *
+  * Layout m
+  * _____________
+  * |     M     |
+  */
+
+.layout-m {
+   #main-column {
+      float: none;
+      margin: 0;
+   }
+}
+
+
+/**
+  * @section columns
+  * @subsecsection layout mr
+  *
+  * Layout mr
+  * _____________
+  * |   M   | R |
+  */
+
+@mixin layout-mr($cols-right) {
+   .layout-mr {
+      $right-column-width: ($grid-column + $grid-gutter) * $cols-right - $grid-gutter;
+      $main-column-width: ($grid-column + $grid-gutter) * ($page-cols - $cols-right) - $grid-gutter;
+
+      #right-column {
+         width: $right-column-width;
+         margin: 0 0 0 $grid-gutter/2;
+      }
+
+      #main-column {
+         width: $main-column-width;
+         margin: 0 $grid-gutter/2 0 $grid-gutter/2;
+      }
+   }
+}
+
+
+/**
+  * @section columns
+  * @subsecsection layout lmr
+  *
+  * Layout lmr
+  * _____________
+  * | L | M | R |
+  */
+
+@mixin layout-lmr($cols-left, $cols-right) {
+   .layout-lmr {
+      $left-column-width: ($grid-column + $grid-gutter) * $cols-left - $grid-gutter;
+      $main-column-width: ($grid-column + $grid-gutter) * ($page-cols - $cols-left - $cols-right) - $grid-gutter;
+      $right-column-width: ($grid-column + $grid-gutter) * $cols-right - $grid-gutter;
+
+      #left-column {
+         width: $left-column-width;
+         margin: 0 $grid-gutter 0 -1*($main-column-width + $left-column-width + $grid-gutter);
+      }
+
+      #main-column {
+         width: $main-column-width;
+         margin: 0 0 0 ($left-column-width + $grid-gutter*1.5);
+      }
+
+      #right-column {
+         width: $right-column-width;
+         margin: 0 0 0 $grid-gutter;
+      }
+   }
+}
+
+
+/* ===========================================================================================================
+   Clearfix                                                                      
+   =========================================================================================================== */
+
+/**
+  * @subsection EasyClearing
+  *
+  * Cleart die Floats ohne zusätzliches Markup
+  * 
+  * @see http://www.positioniseverything.net/easyclearing.html
+  */
+
+/* For all Browsers */
+.clearfix:after, .group:after {
+   content: ".";
+   clear: both;    
+   display: block;
+   height: 0;
+   visibility: hidden;
+}
+ 
+html[xmlns] .clearfix, html[xmlns] .group {
+   display: block;
+}

@@ -1,0 +1,16 @@
+#footer .box {
+   float: left;
+   @include grid-span(2);
+}
+
+#quotes {
+   float: left;
+   display: none;
+   @include grid-span(4, "first");
+}
+
+#infobox {
+   float: left;
+   @include grid-span(2, "last");
+   @include grid-space(2, "padding", "first");   
+}

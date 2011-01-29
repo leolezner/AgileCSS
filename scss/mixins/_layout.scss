@@ -1,9 +1,0 @@
-@mixin nopm {
-   margin: 0;
-   padding: 0;
-}
-
-
-@mixin grid-span($columns) {
-   width: ($grid-column + $grid-gutter) * $columns - $grid-gutter;
-}
