@@ -30,16 +30,6 @@ $font-size-h4: 1.13em;
 $font-size-h5: 1.00em;
 $font-size-h6: 0.88em;
 
-// Mixins
-@mixin font($style, $variant, $weight, $size, $line-height, $family) {
-   font: $style $variant $weight #{$size}/#{$line-height} $family;
-}
-
-@mixin headline($style, $variant, $weight, $font-size, $font-family) {
-   @include font($style, $variant, $weight, $font-size, $line-height/$font-size, $font-family);
-   margin: $line-height/$font-size/2 + em 0 $line-height/$font-size/2 + em;
-}
-
 
 /* ===========================================================================================================
    Headlines                                                                       
