@@ -29,4 +29,21 @@
    @include grid-span(2, "last");
    @include grid-space(2, "margin");
 }
+
+
+@include hmenu("#nav ul");
+
+#nav ul {
+
+}
+
+#nav {
+   float: left;
+   background: #efefef;
+   @include grid-span($page-cols);
+}
+
+#nav a {
+   padding: 2px 5px;
+}
 //// DEMO //// DEMO //// DEMO //// DEMO //// DEMO //// DEMO //// DEMO //// DEMO //// DEMO //// DEMO 

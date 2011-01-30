@@ -12,3 +12,41 @@
   * @link http://www.leolezner.de
   * @valid true
   */
+
+@mixin hmenu($name) {
+   #{$name} {
+      margin: 0;
+      padding: 0;
+   }
+
+   #{$name} li {
+      float: left;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+   }
+
+   #{$name} li a,
+   #{$name} li strong,
+   #{$name} li span {
+      display: block;
+   }
+}
+
+@mixin vmenu($name) {
+   #{$name} {
+      margin: 0;
+      padding: 0;
+   }
+
+   #{$name} li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+   }
+
+   #{$name} li a,
+   #{$name} li strong {
+      display: block;
+   }
+}

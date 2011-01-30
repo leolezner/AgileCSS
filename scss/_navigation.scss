@@ -18,3 +18,61 @@
   Settings                                                                       
   =========================================================================================================== */
 
+
+/* ===========================================================================================================
+ Skiplinks                                                                       
+ =========================================================================================================== */
+
+/**
+ * @section Skiplinks
+ *
+ * Skiplinks
+ */
+
+/* Hide Skiplinks */
+.invisible, a.skip {
+  left: -1000em;
+  position: absolute;
+  top: -1000em;
+}
+
+a.skip:focus {
+  background: #fff;
+  color: #000;   
+  left: 0;
+  padding: 1em;
+  top: 0;
+}
+
+
+
+/**
+  * @section Links
+  *
+  * Hypelinks
+  */
+
+/* Normal */
+a {
+   color: #1E8DC7;
+}
+
+/* Besucht */
+a:visited {
+   color: #1E8DC7;
+}
+
+/* Hover */
+a:hover {
+   color: #1a77aa;
+}
+
+/* Aktiv */
+a:active {
+   color: #b87b0c;
+}
+
+/* Fokus */
+a:focus {
+   
+}
