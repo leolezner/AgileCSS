@@ -1,16 +1,32 @@
+
+
+//// DEMO //// DEMO //// DEMO //// DEMO //// DEMO //// DEMO //// DEMO //// DEMO //// DEMO //// DEMO 
+#logo {
+   height: 100px;
+   @include grid-span(6);
+   float: left;
+}
+
+#top-nav {
+   float: left;
+   height: 100px;
+   @include grid-span(3);
+   @include grid-space(3, "padding");
+}
+
 #footer .box {
    float: left;
    @include grid-span(2);
 }
 
-#quotes {
-   float: left;
-   display: none;
-   @include grid-span(4, "first");
-}
-
 #infobox {
    float: left;
-   @include grid-span(2, "last");
-   @include grid-space(2, "padding", "first");   
+   @include grid-span(2, "first");
 }
+
+#infobox2 {
+   float: left;
+   @include grid-span(2, "last");
+   @include grid-space(2, "margin");
+}
+//// DEMO //// DEMO //// DEMO //// DEMO //// DEMO //// DEMO //// DEMO //// DEMO //// DEMO //// DEMO 
