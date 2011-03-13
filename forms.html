@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+   <title>jQuery Project agilecss - Fri Oct 22 19:33:59 +0200 2010 - jQuery Version: 1.4.2</title>
+
+   <script src="js/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+   <script src="js/vrhythm.js" type="text/javascript" charset="utf-8"></script>
+
+   <script type="text/javascript" charset="utf-8">
+      $(document).ready(function() {
+         $('body').addClass('debug');//.VerticalRhythmGrid();
+      });
+   </script>
+   
+   <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+</head>
+
+<body class="layout-lmr">
+   <div id="header" class="wrapper group">
+      <div id="logo">
+         <a href="/">Logo</a>
+      </div>
+      <div id="top-nav">
+         Navigation
+      </div>
+      <div id="nav">
+         <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Clients</a></li>
+            <li><a href="#">Contact Us</a></li>
+         </ul>
+      </div>
+   </div>
+   
+   <div id="content" class="wrapper group">
+      <div id="main-column">   
+         <h1>Layout</h1>
+         
+         <form action="" class="top-aligned" method="post">
+             <input type="hidden" name="nospam:blank" value="" />   
+
+             <ul class="form-elements">
+               <li>
+                 <label for="company">Firma: <em></em></label>
+                   <input type="text" name="company:required" id="company" value="" /> * 
+               </li>
+
+               <li>
+                 <label for="name">Name: <em></em></label>
+                   <input type="text" name="name:required" id="name" value="" /> *
+               </li>
+
+               <li>
+                 <label for="phone">Telefon: <em></em></label>
+                 <input type="text" name="phone:required" id="phone" value="" /> * 
+               </li>
+
+               <li>
+                 <label for="email">E-Mail Adresse: <em></em></label>
+                 <input type="text" name="email:email:required" id="email" value="" /> *
+               </li>
+
+               <li class="textarea">
+                 <label for="notice">Nachricht:</label>
+                 <textarea name="notice:stripTags" id="notice" cols="50" rows="7" value=""></textarea>
+               </li>
+             </ul>
+             <div class="form-buttons"><input type="submit" value="Anfrage senden" /></div>
+           </form>
+         
+      </div>
+      
+      <div id="left-column">
+         Left
+      </div>
+      
+      <div id="right-column">
+         Right
+      </div>
+   </div>
+   
+   <div id="footer" class="wrapper group">
+      <div class="box">Lorem ipsum dolor sit amet, elit</div>
+      <div class="box">Lorem ipsum dolor sit amet, elit</div>
+      <div class="box">Lorem ipsum dolor sit amet, elit</div>
+      <div class="box">Lorem ipsum dolor sit amet, elit</div>   
+      <div class="box">Lorem ipsum dolor sit amet, elit</div>   
+      <div class="box">Lorem ipsum dolor sit amet, elit</div>         
+   </div>
+   
+   </body>
+</html>
