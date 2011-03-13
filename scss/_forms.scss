@@ -12,3 +12,191 @@
   * @link http://www.leolezner.de
   * @valid true
   */
+
+
+$inputfield-padding: 3px;
+$label-width: 10em;
+$form-padding: 4px;
+$input-width: 250px;
+
+form {
+   margin: $line-height/2 0 $line-height/2;
+}
+
+#main-column, #left-column, #right-column {
+   .form-elements {
+      background: none;
+      margin: 0;
+      padding: 0;
+   }
+
+   .form-elements li {
+      background: none;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+   }
+   
+   .top-aligned .form-elements li {
+      margin-bottom: $line-height/4;   
+   }
+
+   .left-aligned .form-elements li {
+      margin-bottom: $line-height/2;   
+   }   
+}
+
+
+.top-aligned .form-elements li label { 
+   display: block;
+   margin-bottom: 0.135em;
+}
+
+.left-aligned .form-elements li label {   
+   display: block;
+   float: left;
+   //padding: $inputfield-padding $inputfield-padding $inputfield-padding 0;
+   width: $label-width;
+}
+
+/* Left-aligned Label */
+.left-aligned .form-elements li .info {   
+   display: block;
+   padding: 0;
+}
+
+/* Text des Labels */
+.form-elements li label strong {
+   font-weight: normal;
+}
+
+/* Notwendige Angabe */
+.form-elements li .required {
+   color: #ff0000;
+}
+
+
+
+form input[type="text"], form input[type="password"] {
+   //background: #efefef;
+   //border: 1px solid;
+   margin: 0;
+   padding: $form-padding;
+   width: $input-width;
+}
+
+form input[type="text"]:focus, form input[type="password"]:focus {
+   //background: lightgreen;
+   //border: 1px solid;   
+   //outline: 0;
+}   
+
+.form-elements li .info {
+   padding: $line-height;
+}
+
+
+
+textarea {
+   //background: #efefef;
+   //border: 1px solid black;
+   margin: 0;
+   padding: $form-padding + 1;
+}
+
+
+.top-aligned textarea {
+   
+}
+
+/* Mehrzeiliges Eingabefeld beim Fokus */
+textarea:focus {
+   //background: lightgreen;
+   //border: 1px solid black;   
+   //outline: 0;
+}
+
+/* Information nach der Textarea */
+.form-elements li .textarea-info {
+   display: block;   
+   padding: 0;
+}
+
+
+
+
+.form-elements li.checkbox-inside {
+   margin-bottom: $line-height/3;
+   padding: 0;
+}
+
+.form-elements li.checkbox-inside label {
+   display: inline;
+   margin: 0;
+}
+
+.form-elements li.checkbox-inside input {
+   border: none;  
+   margin: 0;
+}
+
+
+
+
+/* Selectbox */
+select {
+   padding: $line-height;
+}
+
+/* Selectbox, Option */
+select option {
+   
+}
+
+/* Selectbox, Optionsgruppe */
+select optgroup {
+   
+}
+
+
+.form-elements li.error input, .form-elements li.error textarea {
+   border: 2px solid red;
+}
+
+// Information nach dem Eingabefeld mit Fehler
+.form-elements li.error .info {
+   color: red;
+}
+
+// Eingabefeld mit Warnung
+.form-elements li.warning input {
+   border: 1px solid #ed8007;
+}
+
+// Information nach dem Eingabefeld mit Warnung
+.form-elements li.warning .info {
+   color: #ed8007;
+}
+
+.left-aligned .form-buttons {
+   padding-left: $label-width;
+}
+
+form input[type="submit"] {
+   //background: #7ce072;
+   //border: 1px solid #489614;
+   //color: black;
+   //cursor: pointer;
+   //margin-right: 1em;
+   //padding: 0.40em $line-height/3;*/
+}
+
+/* Fokusierter Zustand */
+form input[type="submit"]:focus {
+
+}
+
+/* Hover-Zustand */
+form input[type="submit"]:hover {
+
+}
