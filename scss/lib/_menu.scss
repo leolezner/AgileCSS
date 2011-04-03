@@ -34,7 +34,7 @@
 }
 
 @mixin vmenu($name) {
-   #{$name} {
+   #{$name}, #{$name} ul {
       margin: 0;
       padding: 0;
    }
