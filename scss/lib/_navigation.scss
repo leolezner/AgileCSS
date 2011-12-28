@@ -1,0 +1,15 @@
+@mixin skip-links() {
+   .invisible, a.skip {
+     left: -1000em;
+     position: absolute;
+     top: -1000em;
+   }
+
+   a.skip:focus {
+     background: #fff;
+     color: #000;   
+     left: 0;
+     padding: 1em;
+     top: 0;
+   }   
+}

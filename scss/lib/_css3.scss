@@ -1,0 +1,33 @@
+@mixin box-shadow($x, $y, $blur, $color) {
+   -moz-box-shadow: $x $y $blur $color;
+   -webkit-box-shadow: $x $y $blur $color;
+   box-shadow: $x $y $blur $color;
+}
+
+@mixin border-radius($radius, $position:'') {
+   @if($position == '') {
+      -moz-border-radius: $radius;
+      -webkit-border-radius: $radius;
+      border-radius: $radius;      
+   }
+   
+   @if($position != '') {
+      -webkit-border-#{$position}-radius: $radius;
+      border-#{$position}-radius: $radius;
+      @if($position == 'bottom-right') {
+         $position: 'bottomright'
+      }
+      @if($position == 'top-right') {
+         $position: 'topright'
+      }
+      @if($position == 'bottom-left') {
+         $position: 'bottomleft'
+      }
+      @if($position == 'top-left') {
+         $position: 'topleft'
+      }
+      -moz-border-radius-#{$position}: $radius;
+   }
+
+	background-clip: padding-box;
+}

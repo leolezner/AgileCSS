@@ -1,0 +1,242 @@
+@import "lib/reset";
+@import "lib/layout";
+@import "lib/typo";
+@import "lib/navigation";
+@import "lib/menu";
+@import "lib/table";
+@import "lib/list";
+@import "lib/tools";
+@import "lib/css3";
+@import "lib/debug";
+
+
+/* ===========================================================================================================
+   Setup                                                                       
+   =========================================================================================================== */
+
+// Default font size
+$font-size: 83%;
+
+// Default line height
+$line-height: 2em;
+
+// Default font face
+$font-family: "Verdana", "Trebuchet MS", sans-serif;
+
+// Headings
+$font-size-h1: 2.40em;
+$font-size-h2: 1.90em;
+$font-size-h3: 1.31em;
+$font-size-h4: 1.13em;
+$font-size-h5: 1.00em;
+$font-size-h6: 0.88em;
+
+$hr-border: 1px solid;
+
+// Page settings
+$page-cols: 12;
+$page-margin: 0;
+$page-min-height: 500px;
+
+// Grid settings
+$grid-gutter: 20px;
+$grid-column: 60px;
+
+// Links
+$a-color: #ff6300;
+$a-hover-color: #961A39;
+
+
+/* ===========================================================================================================
+   Includes                                                                       
+   =========================================================================================================== */
+
+@include body-text("#main-column, #left-column, #right-column");
+@include code-text('"Courier New", Courier, monospace');
+@include standard-lists(1.5);
+@include simple-table("1px solid black");
+@include skip-links();
+
+
+
+/* ===========================================================================================================
+   Headlines                                                                       
+   =========================================================================================================== */
+
+#main-column {
+   h1 {
+      color: #000;
+      @include font(normal, normal, normal, $font-size-h1, $line-height*2/$font-size-h1, $font-family);
+      margin: 0 0 $line-height/$font-size-h1*1.5 + em;
+   }
+
+   h2 {
+      color: #000;
+      @include font(normal, normal, normal, $font-size-h2, $line-height/$font-size-h2, $font-family);
+      margin: $line-height/$font-size-h2/2 + em 0 $line-height/$font-size-h2/2 + em;
+   }
+   
+   h3 {
+      color: #000;
+      @include headline(normal, normal, normal, $font-size-h3, $font-family);
+   }
+
+   h4 {
+      color: #000;
+      @include headline(normal, normal, normal, $font-size-h4, $font-family);
+   }
+
+   h5 {
+      color: #000;
+      @include headline(normal, normal, normal, $font-size-h5, $font-family);
+   }
+
+   h6 {
+      color: #000;
+      @include headline(normal, normal, normal, $font-size-h6, $font-family);
+   }
+}
+
+
+
+/* ===========================================================================================================
+   Layout                                                                       
+   =========================================================================================================== */
+
+.wrapper {
+   margin: 0 auto;
+   padding: $page-margin;
+   width: ($grid-column + $grid-gutter) * $page-cols;
+}
+
+
+#header-container, 
+#content-container, 
+#footer-container {
+}
+
+#header-container {
+}
+
+#content-container {
+}
+
+#footer-container {
+}
+
+// Left and middle column
+@include layout-lm(3);
+
+// Middle and right column
+@include layout-mr(3);
+
+// Left (first parameter), middle and right (second parameter) column
+@include layout-lmr(2, 2);
+
+/* Content areas */
+#header, #content, #footer {
+   
+}
+
+#header {
+}
+
+#content {
+   min-height: $page-min-height;
+}
+
+#left-column{
+}
+
+#right-column {
+}
+
+#main-column {
+}
+
+#footer {
+}
+
+
+
+/* ===========================================================================================================
+   Navigation                                                                       
+   =========================================================================================================== */
+
+
+a {
+   color: $a-color;
+}
+
+a:visited {
+   color: $a-color;
+}
+
+a:hover {
+   color: $a-hover-color;
+}
+
+a:active {
+   color: #b87b0c;
+}
+
+a:focus {
+   
+}
+
+
+
+/* ===========================================================================================================
+   App                                                                       
+   =========================================================================================================== */
+
+#logo {
+   height: 100px;
+   @include grid-span(6);
+   float: left;
+}
+
+#top-nav {
+   float: left;
+   height: 100px;
+   @include grid-span(3);
+   @include grid-space(3, "padding");
+}
+
+#footer .box {
+   float: left;
+   @include grid-span(2);
+}
+
+#infobox {
+   float: left;
+   @include grid-span(2, "first");
+}
+
+#infobox2 {
+   float: left;
+   @include grid-span(2, "last");
+   @include grid-space(2, "margin");
+}
+
+@include hmenu("#nav ul");
+
+#nav ul {
+
+}
+
+#nav {
+   float: left;
+   background: #efefef;
+   @include grid-span($page-cols);
+}
+
+#nav a {
+   padding: 2px 5px;
+}
+
+
+@include debug-headlines;
+@include debug-text;
+@include debug-layout;
+@include debug-table;

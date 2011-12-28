@@ -21,3 +21,90 @@
    @include font($style, $variant, $weight, $font-size, $line-height/$font-size, $font-family);
    margin: $line-height/$font-size/2 + em 0 $line-height/$font-size/2 + em;
 }
+
+@mixin body-text($cols) {
+   body {
+      font: #{$font-size}/#{$line-height} $font-family;
+      vertical-align: baseline;
+   }
+   
+   #{cols} {
+      p {
+         font-size: 1em;
+         padding: 0 0 $line-height;
+      }
+
+      hr {
+         border: none;
+         border-top: $hr-border;
+         height: 1px;
+         margin: -1px 0 $line-height;
+      }
+   }
+   
+   abbr, acronym {
+      border-bottom: 1px dotted;
+      cursor: help;
+   }
+   
+   sub {
+      font-size: 0.75em;
+      position: relative;
+      top: 0.4em;
+   }
+
+   sup {
+      font-size: 0.75em;
+      position: relative;
+      bottom: 0.8em;
+   }
+   
+   del {
+      text-decoration: line-through;
+   }
+
+   dfn {
+      border-bottom: 1px dashed; 
+      font-style: italic;
+   }
+
+   em, i {
+      font-style: italic;
+   }
+
+   ins {
+
+   }
+
+   q {
+      font-style: italic;
+   }
+
+   small {
+      font-size: 0.75em;
+   }
+
+   strong, b {
+      font-weight: bold;
+   }   
+}
+
+@mixin quote-text() {
+   blockquote {
+      /* TODO */
+   }
+
+   cite {
+      /* TODO */
+   }
+}
+
+@mixin code-text($font-family) {
+   code {
+      font-family: #{$font-family};
+   }
+   pre {
+      font-family: #{$font-family};
+      margin: 0 0 $line-height;
+   }
+}

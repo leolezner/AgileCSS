@@ -1,0 +1,42 @@
+/** 
+  * lib/debug.css
+  *
+  * Debug Library
+  *
+  * @project AgileCSS
+  * @copyright (c) 2010-2011 by Leonid Lezner
+  * @author Leonid Lezner 
+  * @version 0.0.2
+  * @date 2011-12-28
+  * @license Creative Commons Attribution 2.5 Generic License
+  * @link http://www.leolezner.de
+  * @valid true
+  */
+
+
+@mixin debug-headlines {
+   h1, h2, h3, h4, h5, h6 {
+      background: rgba(0, 0, 255, 0.3);
+   }
+}
+
+@mixin debug-text {
+   p, ul, ol, dl, pre, blockquote {
+      background: rgba(255, 255, 0, 0.3);
+      li {
+         outline: 1px solid green;
+      }
+   }
+}
+
+@mixin debug-layout {
+   div {
+      outline: 1px solid red;
+   } 
+}
+
+@mixin debug-table {
+   table {
+      background: rgba(0,255,0,0.3);
+   }
+}
